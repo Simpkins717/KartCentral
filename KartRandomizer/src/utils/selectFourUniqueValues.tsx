@@ -11,7 +11,9 @@ const SelectFourUniqueValues: React.FC<SelectFourUniqueValuesProps> = ({
   data,
 }) => {
   const [selectedValues, setSelectedValues] = useState<TrackData[]>([]);
-  const [remainingValues, setRemainingValues] = useState<TrackData[]>(data);
+  const [remainingValues, setRemainingValues] = useState<TrackData[]>([
+    ...data,
+  ]);
 
   const handleSelectUniqueValues = () => {
     if (remainingValues.length < 4) {
@@ -28,7 +30,7 @@ const SelectFourUniqueValues: React.FC<SelectFourUniqueValuesProps> = ({
   };
 
   const handleResetValues = () => {
-    setRemainingValues(data);
+    setRemainingValues([...data]);
     setSelectedValues([]);
   };
 
