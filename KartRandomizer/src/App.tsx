@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='text-center align-middle min-h-screen font-barlowSemiCondensed sm:max-w-screen sm:flex sm:flex-col lg:max-w-7xl mx-auto'>
       <HeaderTwo />
-      <div className=' xl:max-w-7xl lg:max-w-3xl sm:max-w-full mx-auto  pt-4 md:pt-12 pb-16 px-6 md:border-cyan-700 md:border-2 my-8 rounded-md'>
+      <div className=' xl:max-w-7xl lg:max-w-5xl sm:max-w-full mx-auto  pt-4 md:pt-12 pb-16 px-6 md:border-cyan-700 md:border-2 my-8 rounded-md'>
         <Hero />
         <ToggleableSelectComponent />
       </div>
