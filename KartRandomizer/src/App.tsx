@@ -1,35 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Hero from './components/Hero';
+import Footer from './components/Footer';
+import ToggleableSelectComponent from './utils/toggleableSelectComponent';
+import HeaderTwo from './components/HeaderTwo';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='text-center align-middle min-h-screen font-barlowSemiCondensed sm:max-w-screen sm:flex sm:flex-col lg:max-w-7xl mx-auto'>
+      <HeaderTwo />
+      <div className=' xl:max-w-7xl lg:max-w-3xl sm:max-w-full mx-auto  pt-4 md:pt-12 pb-16 px-6 md:border-cyan-700 md:border-2 my-8 rounded-md'>
+        <Hero />
+        <ToggleableSelectComponent />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <Footer companyName='davideveloped' year={new Date().getFullYear()} />
+    </div>
+  );
 }
 
-export default App
+export default App;
