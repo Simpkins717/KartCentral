@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring';
 
 const Header: React.FC = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
-  const headerRef = useRef(null);
+  const headerRef = useRef<HTMLHeadElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
