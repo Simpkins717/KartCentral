@@ -35,8 +35,8 @@ const SelectFourUniqueValues: React.FC<SelectFourUniqueValuesProps> = ({
   };
 
   return (
-    <div className='md:flex justify-around items-center'>
-      <div className='text-cyan-700 font-bold md:-mt-24'>
+    <div className='md:flex justify-around md:justify-start items-center '>
+      <div className='text-cyan-700 font-bold md:-mt-24 md:px-12'>
         {selectedValues.length > 0 ? (
           <ul>
             {selectedValues.map((value, index) => (
@@ -71,6 +71,7 @@ const SelectFourUniqueValues: React.FC<SelectFourUniqueValuesProps> = ({
           </button>
         </div>
       </div>
+
       <AllTracksList tracks={data} remainingValues={remainingValues} />
     </div>
   );

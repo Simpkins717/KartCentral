@@ -36,7 +36,7 @@ const Footer: React.FC<FooterProps> = ({ companyName, year }) => {
           <FaInstagramSquare size={48} />
         </a>
       </div>
-      <p>Version 1.0.2</p>
+      <p>Version 1.1.0</p>
     </footer>
   );
 };
